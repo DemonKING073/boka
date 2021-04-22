@@ -69,3 +69,30 @@ nav {
   height: 20px;
   width: 20px;
 }
+
+.home-image {
+  width: 100%;
+  height: 70vh;
+  background-color: #ffffff;
+  background-image: url(./home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  background-blend-mode: multiply;
+}
+.short-nav {
+  height: 6vh;
+  background-color: #fefe2a;
+}
+
+.big-text {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.txt-small {
+  font-size: 28px;
+  font-weight: 200;
+  padding-top: 30px;
+}
