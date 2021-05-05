@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karantina&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
 
 *,
 html,
@@ -15,10 +16,43 @@ section {
 }
 
 nav {
-  background-color: #fefe2a;
+  background-color: #d9d9d9;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.cart {
+  height: 28px;
+  padding-top: 4px;
+  color: #3c6e71;
+}
+
+.cart-counter {
+  padding-left: 3px;
+  color: #3c6e71;
+}
+.cart-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #3c6e71;
+  width: 5rem;
+  justify-content: space-around;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-btn-container {
+  padding-right: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-title {
+  padding-left: 0.5rem;
+  font-family: Girassol;
+  font-size: 18px;
 }
 .logo-container {
   display: flex;
@@ -30,7 +64,7 @@ nav {
   border: none;
   outline: none;
   color: white;
-  background-color: black;
+  background-color: #3c6e71;
   font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
@@ -52,12 +86,13 @@ nav {
 .sub-nav ul li a {
   color: black;
   display: block;
-  padding: 15px;
+  padding: 8px;
   text-decoration: none;
+  font-size: 12px;
 }
 
 .sub-nav ul li a:hover {
-  background-color: gray;
+  background-color: #e4dfdf;
 }
 
 .sub-nav ul {
@@ -66,9 +101,12 @@ nav {
   padding-left: 30px;
 }
 
+/* color: #3c6e71; */
+/* background-color: #bfbf6a; */
+
 footer {
   height: 20vh;
-  background-color: #bfbf6a;
+  background-color: #d9d9d9;
   display: flex;
   justify-content: space-between;
 }
@@ -95,6 +133,20 @@ footer {
 
 .f-subcontent h5 {
   color: #232323;
+  font-weight: lighter;
+}
+
+.f-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.f-icon {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 /* Home Page */
@@ -155,7 +207,7 @@ footer {
   text-align: center;
   padding-top: 4rem;
   font-size: 32px;
-  color: #787878;
+  color: #284b63;
   position: relative;
 }
 .shop-detail-box h2::after {
@@ -165,7 +217,7 @@ footer {
   width: 8rem;
   text-align: center;
   margin: 5px auto;
-  background-color: #fefe2a;
+  background-color: #3c6e71;
 }
 .card-container {
   display: flex;
@@ -176,34 +228,41 @@ footer {
 .card {
   height: 350px;
   width: 260px;
-  background-color: #b1b2ab;
-  border-radius: 6px;
+  /* background-color: #b1b2ab; */
+  border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .card-heading {
-  color: #353535;
+  color: white;
   display: flex;
   align-items: center;
   padding-top: 1rem;
   padding-left: 15px;
+  padding-bottom: 8px;
   font-family: Oswald;
   font-size: 1.5rem;
+  background-color: #284b63;
 }
 .star-icon {
   height: 20px;
   width: 20px;
 }
 .card-list {
+  display: flex;
   padding-left: 45px;
   padding-top: 2rem;
   color: #3e3e3e;
-  margin-right: 15px;
+  padding-right: 15px;
+  background-color: #f5f5f5;
+  flex-grow: 1;
 }
 
 /* Login Page */
