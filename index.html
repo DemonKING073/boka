@@ -48,19 +48,40 @@
     </div>
 
     <main>
-        <section class="home-image">
-            <div style="padding-top: 5rem;">
-                <div class="big-text">
-                    GET $10 OFF EVERY
-                </div>
-                <div class="big-text">
-                    SHOP OVER $100
-                </div>
-                <div class="txt-small">
-                    Nepalese and Indian grocery store
+        <section class="home-image" >
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1" />
+                    <input type="radio" name="radio-btn" id="radio2" />
+                    <input type="radio" name="radio-btn" id="radio3" />
+                    <input type="radio" name="radio-btn" id="radio4" />
+                    <div class="slide first">
+                        <img class="lamo" src="./home.jpeg"  alt=""/>
+                    </div>
+                    <div class="slide ">
+                        <img class="lamo" src="./two.jpg"  alt=""/>
+                    </div>
+                    <div class="slide ">
+                        <img class="lamo" src="./three.jpg"  alt=""/>
+                    </div>
+                    <div class="slide ">
+                        <img class="lamo" src="./four.jpg"  alt=""/>
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
                 </div>
             </div>
         </section>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
         <div class="quote-box">
             <div>
                 <img class="shiv-img" src="./Shiv.jpg" />
@@ -299,6 +320,16 @@
                     <a href="#"><img class="f-icon" height="40" src="./facebook.svg" /></a>
                 </div>   
             </div>
+            <script type="text/javascript">
+                var counter = 1;
+                setInterval(function(){
+                    document.getElementById('radio'+counter).checked= true;
+                    counter++;
+                    if(counter>4){
+                        counter=1;
+                    }
+                },2000)
+            </script>
     </footer>
     
     
