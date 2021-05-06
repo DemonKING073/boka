@@ -161,7 +161,6 @@ footer {
 .slider {
   width: 100%;
   height: 80vh;
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -254,20 +253,31 @@ navigation manual */
 #radio3:checked ~ .navigation-auto .auto-btn3 {
   background-color: #3c6e71;
 }
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-  background-color: #3c6e71;
-}
 
 .short-nav {
   height: 6vh;
   background-color: #fefe2a;
 }
+.one {
+  position: relative;
+}
+
 .big-text {
-  font-size: 60px;
-  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 80%;
+}
+
+.big-text h3 {
+  font-weight: 300;
+  color: #383838;
   font-family: Orelega One;
-  color: #fcfcfc;
-  font-weight: lighter;
+  font-size: 70px;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .txt-small {
@@ -275,7 +285,9 @@ navigation manual */
   font-weight: 200;
   padding-top: 7rem;
   font-family: Karantina;
-  color: #e4e4e4;
+  color: #303030;
+  text-align: center;
+  padding-top: 6rem;
 }
 
 .quote-box {
