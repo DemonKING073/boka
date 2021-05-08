@@ -40,8 +40,11 @@
             <li><a href="./About.html">ABOUT</a></li>
         </ul>
     </div>
-    <section>
-        <h1>Shopping Menus</h1>
+    <section class="sec-store">
+        <h1 class="store-heading">Store location</h1>
+        <div id="map">
+
+        </div>
 
     </section>
 
@@ -129,7 +132,24 @@
                     </div>
                 </div>
         </footer>
-
+        <script src="./script.js"></script>
     <!--Footer end-->
+    <script>
+        let map;
+        function initMap() {
+        var location = {lat:-33.96716,lng:151.10666};
+        var map = new google.maps.Map(document.getElementById("map"),{
+            zoom:18,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title:"mero ghar"
+        })
+    }
+    </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQZyEhW_ONeoSBaZJOexld1ENewtOyYC0&callback=initMap"
+      type="text/javascript"></script>
 </body>
 </html>
