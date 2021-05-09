@@ -44,7 +44,7 @@
         <section class="home-image" >
             <div class="slider">
                 <div class="slides">
-                    <input type="radio" name="radio-btn" id="radio1" />
+                    <input type="radio" checked name="radio-btn" id="radio1" />
                     <input type="radio" name="radio-btn" id="radio2" />
                     <input type="radio" name="radio-btn" id="radio3" />
                     <div class="slide first one">
@@ -360,7 +360,15 @@
                     <a target="_blank" href="https://www.facebook.com/jayshambhugroceries/?ref=py_c"><i class="fa fa-linkedin f-icon" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <script src="./script.js">
+            <script>
+                var counter = 1;
+                setInterval(function(){
+                    document.getElementById('radio'+counter).checked=true;
+                    counter++;
+                    if(counter>3){
+                        counter=1;
+                    }
+                },5000);
             </script>
     </footer>
     
