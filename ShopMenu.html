@@ -19,11 +19,6 @@
             <div class="nav-title">Nepalese Grocery Store</div>
         </div>
         <div class="nav-btn-container">
-            <div class="cart-container">
-                <div>
-                    <svg class="cart" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
-                </div>
-            </div>
             <div>
                 <button onclick="window.location.href='Login.html'" class="btn" >Login</button>
             </div>
@@ -33,10 +28,30 @@
         <ul>
             <li><a href="./ShopMenu.html">SHOP ONLINE</a></li>
             <li><a href="./Store.html">STORES</a></li>
-            <li><a href="#">VIRTUAL WALKTHROUGH</a></li>
+            <li><a target="_blank" href="https://app.lapentor.com/sphere/virtualwalkthrough-demo-1">VIRTUAL WALKTHROUGH</a></li>
             <li><a href="./About.html">ABOUT</a></li>
         </ul>
     </div>
+    <section class="sec-menu">
+        <div class="about-heading">
+            <h2>Cart</h2>
+        </div>
+        <div class="Cart-container">
+            <div class="cart-row-header">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+        </div>
+        
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <div style="width: 80%; margin: 0 auto; display: flex; justify-content: center;">
+            <button class="purchase-btn" onclick="purchase()" role="button">PURCHASE</button>
+        </div>
+    </section>
     <section class="sec-menu">
         <h1 class="menu-heading"> Products</h1>
         <div>
@@ -52,12 +67,12 @@
             <div class="item-card-container">
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/dorites.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/dorites.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
                             <h3 class="item-title">Doritos</h3>
-                        </div>
+                        </div>  
                         <div style="display: flex; flex-grow: 1; align-items: center; justify-content: space-around; width: 100%;">
                             <div class="item-price">
                                 $80
@@ -70,7 +85,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/bananaChip.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/bananaChip.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -88,7 +103,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/lays.jpg " style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/lays.jpg " style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -106,7 +121,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/chocoOats.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/chocoOats.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -124,7 +139,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/madAngle.webp" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/madAngle.webp" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -142,7 +157,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/yogaBar.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/yogaBar.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -160,7 +175,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/almond.webp" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/almond.webp" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -178,7 +193,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/g/quinoa.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/g/quinoa.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -208,7 +223,7 @@
             <div class="item-card-container">
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/pan.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/pan.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -226,7 +241,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/prestigeInduction.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/prestigeInduction.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -244,7 +259,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/sunFlame.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/sunFlame.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -262,7 +277,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/knifeSet.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/knifeSet.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -280,7 +295,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/mixer.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/mixer.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -298,7 +313,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/grill.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/grill.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -316,7 +331,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/dustbin.jpeg " style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/dustbin.jpeg " style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -334,7 +349,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/k/bottle.png" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/k/bottle.png" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -364,7 +379,7 @@
             <div class="item-card-container">
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/kent.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/kent.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -382,7 +397,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/iron.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/iron.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -400,7 +415,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/washingMachine.webp" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/washingMachine.webp" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -418,7 +433,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/tv.webp" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/tv.webp" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -436,7 +451,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/fan.jpeg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/fan.jpeg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -454,7 +469,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/waterHeater.webp" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/waterHeater.webp" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -472,7 +487,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/mirror.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/mirror.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>
@@ -490,7 +505,7 @@
                 </div>
                 <div class="item-card">
                     <div>
-                        <img src="./products/h/cleaner.jpg" style="height: 200px; width: 100%;" />
+                        <img class="item-image" src="./products/h/cleaner.jpg" style="height: 200px; width: 100%;" />
                     </div>
                     <div style="flex-grow: 1;" class="item-bottom-container">
                         <div>

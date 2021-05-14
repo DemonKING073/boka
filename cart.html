@@ -19,6 +19,16 @@
             <div class="nav-title">Nepalese Grocery Store</div>
         </div>
         <div class="nav-btn-container">
+            <a href="./cart.html">
+            <div class="cart-container">
+                <div class="cart-counter">
+                    0
+                </div>
+                <div>
+                    <svg class="cart" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                </div>
+            </div>
+            </a>
             <div>
                 <button onclick="window.location.href='Login.html'" class="btn" >Login</button>
             </div>
@@ -32,45 +42,27 @@
             <li><a href="./About.html">ABOUT</a></li>
         </ul>
     </div>
-    <section class="sec-login">
-        <h1 class="login-header">Login Page</h1>
-        <div class="login-container">
-            <div>
-                <h3 class="box-header">Welcome</h3>
-            </div>
-            <div class="box-bottom" style="flex-grow: 1;">
-                <form onsubmit="return false">
-                    <div class="sub-box">
-                        <label>
-                            User
-                            <!-- <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg> -->
-                        </label>
-                        <input id="user" placeholder="Username or Email" />
-                    </div>
-                    <div class="sub-box">
-                        <label>
-                            <!-- <svg class="star-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg> -->
-                            Password
-                        </label>
-                        <input id="password" placeholder="Password" type="password"/>
-                    </div>
-                    <div class="login-btn-container">
-                        <button class="login-btn" onclick="login()">Login</button>
-                    </div>
-                </form>
-                <div class="forget-box">
-                    <div>
-                        forget password?
-                    </div>
-                    <div>
-                        create a new account
-                    </div>
-                </div>
+    
+
+    <section style="height: 100vh;">
+        <div class="about-heading">
+            <h2>Cart</h2>
+        </div>
+        <div class="Cart-container">
+            <div class="cart-row-header">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
             </div>
         </div>
-
+        
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        
+        <button class="Btn btn-primary btn-purchase" role="button">PURCHASE</button>
     </section>
-
 
     
 
@@ -157,6 +149,6 @@
         </footer>
 
     <!--Footer end-->
-    <script src="./script.js"></script>
+    
 </body>
 </html>
