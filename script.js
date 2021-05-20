@@ -122,7 +122,6 @@ function removeCartItem(event){
         updateCartTotal();
 }
 
-updateCartTotal();
 function updateCartTotal(){
     let total=0;
     let cartRows = document.getElementsByClassName('cart-row');
@@ -138,7 +137,13 @@ function updateCartTotal(){
 }
 
 function purchase() {
-    alert("Purchase Successful")
+    const total = document.getElementsByClassName('cart-total-price')[0].innerText;
+    if(total=='$0'){
+        alert("No Items!")
+    }else{
+        alert("Purchase Successful")
+    }
+    console.log(total)
 }
 
 

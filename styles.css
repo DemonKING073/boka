@@ -50,6 +50,12 @@ nav {
   font-family: Girassol;
   font-size: 18px;
 }
+.footer-title{
+  padding-left: 0.5rem;
+  font-family: Girassol;
+  font-size: 15px;
+  width: 190px;
+}
 .logo-container {
   display: flex;
   flex-direction: row;
@@ -142,7 +148,7 @@ footer {
 
 .f-icons {
   display: flex;
-  flex-grow: 0.1;
+  flex-grow: 1;
   align-items: center;
   margin-right: 2rem;
   justify-content: space-around;
